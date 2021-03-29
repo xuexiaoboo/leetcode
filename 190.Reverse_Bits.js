@@ -9,6 +9,11 @@ var reverseBits = function(n) {
     var count = 0;
     while (count++ < 32) {
         res <<= 1;
+        /**
+         * n & 1  取出 n 的二进制数的最后(右)一位
+         * 
+         * res |= (n & 1)  将 n 中取出的数放到移位后的 res 的最右位
+         */
         res |= (n & 1);
         n >>= 1;
     }
